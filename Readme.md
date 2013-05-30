@@ -21,13 +21,13 @@ textDimensions('Hello world', document.querySelector('div')); // { width: 126, h
 
 ## Available Styles
 
-[*] font-size
-[*] font-style
-[*] font-weight
-[*] font-family
-[*] line-height
-[*] text-transform
-[*] letter-spacing
+* font-size
+* font-style
+* font-weight
+* font-family
+* line-height
+* text-transform
+* letter-spacing
 
 ## License
 
