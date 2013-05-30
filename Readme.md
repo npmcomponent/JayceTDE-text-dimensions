@@ -22,6 +22,9 @@ textDimensions('Hello world', { 'font-size': '24px' });       // { width: 113, h
 // Copy styles from an element
 textDimensions('Hello world', document.querySelector('div')); // { width: 126, height: 20 }
 
+// Use textContent and styling of an element
+textDimensions(document.querySelector('div'));                // { width: 180, height: 40 }
+
 ```
 
 ## Available Styles
