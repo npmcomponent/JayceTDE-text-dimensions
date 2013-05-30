@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <link rel="stylesheet" href="build/build.css" />
+    
+    <style>
+        
+        .test {
+            display: inline-block;
+            padding: 20px;
+            color: red;
+        }
+        
+        .small {
+            font-size: 8px;
+        }
+        
+        .large {
+            font-size: 24px;
+        }
+        
+        .bold {
+            font-weight: bold;
+        }
+        
+        .family {
+            font-family: "Comic Sans MS", cursive, sans-serif;
+        }
+        
+        .lineheight {
+            line-height: 5em;
+        }
+        
+        .transform {
+            text-transform: capitalize;
+        }
+        
+        .spacing {
+            letter-spacing: 5px;
+        }
+        
+    </style>
+    
+</head>
+<body>
+
+    <div><span class="normal">Hello world</span></div>
+    <div><span class="small">Hello world</span></div>
+    <div><span class="large">Hello world</span></div>
+    <div><span class="bold">Hello world</span></div>
+    <div><span class="family">Hello world</span></div>
+    <div><span class="lineheight">Hello world</span></div>
+    <div><span class="transform">Hello world</span></div>
+    <div><span class="spacing">Hello world</span></div>
+
+<script src="build/build.js"></script>
+<script>
+
+var textDimensions = require('text-dimensions')
+  , testEls = 'normal small large bold family lineheight transform spacing'.split(' ')
+;
+
+for (var i = 0; i < testEls.length; i += 1) {
+    
+    var el = document.querySelector('.' + testEls[i]);
+    
+    appendTest(testEls[i], textDimensions(el.textContent, el), el);
+    
+    
+}
+
+appendTest('manual style', textDimensions('Hello world', { 'letter-spacing': '20px', 'font-size': '80px' }));
+    
+function appendTest(name, res, after) {
+
+    var el = document.createElement('span');
+    
+    el.className = 'test';
+    el.textContent = name + ': ' + res.width + 'X' + res.height;
+    
+    if (after) {
+        after.parentNode.insertBefore(el, after.nextSibling);
+    } else {
+        document.body.appendChild(el);
+    }
+    
+}
+
+</script>
+
+</body>
+</html>

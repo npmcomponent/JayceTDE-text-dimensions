@@ -1,0 +1,19 @@
+{
+  "name": "text-dimensions",
+  "repo": "JayceTDE/text-dimensions",
+  "description": "Get the width and height of a string of text",
+  "version": "0.0.1",
+  "keywords": [],
+  "dependencies": {
+    "jkroso/computed-style": "*"
+  },
+  "development": {},
+  "license": "MIT",
+  "main": "index.js",
+  "scripts": [
+    "index.js"
+  ],
+  "styles": [
+    "text-dimensions.css"
+  ]
+}
