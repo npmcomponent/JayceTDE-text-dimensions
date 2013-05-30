@@ -44,6 +44,11 @@ function extractStyles(el) {
 
 function dimensions(text, styles) {
     
+    if (text instanceof HTMLElement) {
+        styles = extractStyles(text);
+        text = text.textContent;
+    }
+    
     if (styles instanceof HTMLElement) {
         styles = extractStyles(styles);
     }
