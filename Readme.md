@@ -13,8 +13,13 @@
 
 var textDimensions = require('text-dimensions');
 
+// No styles
 textDimensions('Hello world');                                // { width: 71, height: 20 }
+
+// Manually set styles
 textDimensions('Hello world', { 'font-size': '24px' });       // { width: 113, height: 28 }
+
+// Copy styles from an element
 textDimensions('Hello world', document.querySelector('div')); // { width: 126, height: 20 }
 
 ```
