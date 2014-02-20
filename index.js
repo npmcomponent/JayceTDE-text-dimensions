@@ -1,6 +1,6 @@
 'use strict';
 
-var style = require('computed-style')
+var style = require('jkroso-computed-style')
   , el = document.createElement('div')
   , styleList = [
       'font-size'

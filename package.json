@@ -1,0 +1,14 @@
+{
+  "name": "jaycetde-text-dimensions",
+  "description": "Get the width and height of a string of text",
+  "version": "0.0.1",
+  "keywords": [],
+  "main": "index.js",
+  "styles": [
+    "text-dimensions.css"
+  ],
+  "dependencies": {
+    "jkroso-computed-style": "git://github.com/npmcomponent/jkroso-computed-style.git"
+  },
+  "license": "MIT"
+}
